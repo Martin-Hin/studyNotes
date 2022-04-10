@@ -3,6 +3,9 @@
 
 name: Node.js CI
 
+ env:
+  JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+  
 on:
   push:
     branches: [ main ]
@@ -27,3 +30,9 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Deploy
+        env:
+          GIT_PASS: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm run deploy
+    
