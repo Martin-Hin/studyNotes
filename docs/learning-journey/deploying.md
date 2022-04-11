@@ -6,11 +6,6 @@ sidebar_position: 3
 
 ### How to deploy on Github
 
-Just a random text to find if these works.
+Find below the steps required to prepare docusaure to be deployed on github pages and how to automate the
+process with github workflow in order to deploy automatically the latest version of the main branch.
 
-```html
-<div>
-  <p>Another random testing sentence.</p>
-</div>
-
-```
