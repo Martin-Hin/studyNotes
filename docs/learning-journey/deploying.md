@@ -11,4 +11,7 @@ process with github workflow in order to deploy automatically the latest version
 
 ### Setup github workflow 
 
-Create a `yml` to automate the deployment of the main branch
+To automate the workflow a `yml` file has to be written and instructions set. In `yml` file we declare the event the jobs and the steps that should be taken. In my case the event is when the new changes are pushed to the main branch. This deploys the new code on Github automatically following a set of steps.
+
+#### How Deployment actually works 
+
