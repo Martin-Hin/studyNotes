@@ -2,46 +2,45 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+ Hi, discover  [Martin Hinga](https://martin-hin.github.io/studyNotes/) in just a five minutes. :wave: :grin:
 
-## Getting Started
+## Who am I
 
-Get started by **creating a new site**.
+I am a student at the [Haaga-Helia University of Applied Sciences](https://www.haaga-helia.fi/en). I am a motivated aspiring Full-stack developer who is here willing to share my learning journey and the notes that I take towards my successful career development with the whole world.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+#### Tools that I use
 
-### What you'll need
+Below is a list of the tools that I use to learn and explanations on how I use them and the problems and solutions that I get.
 
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Macbook pro 2020
+- Microsoft wireless keyboard and mouse
+- Samsung external monitor 32" 
+- Visual studio code ( *preferred* )
+- Atom 
+- Bracket
+- zsh ( *terminal* )
+- Git
+- Github Desktop
+- Figma 2
+- Sketch
+- Python launcher
 
-## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
 
-The classic template will automatically be added to your project after you run the command:
+#### Tech stack that I am working on
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+Below is a list of the different technologies that I am continuously learning with the intention of understanding how I can bring them together to successfully create business solutions. 
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- CSS3
+- HTML5
+- JavaScript vanilla
+- REACT.js
+- Python
+- NODE.js
+- Git
+- GitHub
+- SQL
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+The page is updated as I keep learning so be sure to come back later and have a look at what new stuff have been added.  :thumbsup:
