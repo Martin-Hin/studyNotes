@@ -20,7 +20,7 @@ export default Counter;
 In the code above I defined a component called **Counter**.
 The counter class above extends the component class class that is imported from the react module.
 The Component class has methods that are inherited into the Counter class.
-The <h1></h1> element that is returned in the code above is a .jsx expression which gets compiled to React.createElement and that is the reason why it is imported from the react object on the top of the code.
+The h1 element that is returned in the code above is a .jsx expression which gets compiled to React.createElement and that is the reason why it is imported from the react object on the top of the code.
 It is also possible to define and export the compnent on the same line as indicated below.
 
 ```jsx
@@ -68,10 +68,46 @@ React.Fragment
 ```
 ## Embedding expressions
 
-1. [x] This is where we start tomorrow.
-2. [ ] How do we do it?
-3. [ ] What is embedding?
+- state is a special property in react components and it is an object that stores any data that the component needs.
+- To embed JavaScript expressions in react, use curly braces within an html element. The code will be rendered dynamically. 
+- jsx expressions are like any normal JavaScript  objects, they can be passed as values in a constant  or used as functions or objects.
 
+```jsx
+state = {
+  //This is where the data goes with examples
+  count: 0,
+  address : {
+    street: 'helsinginkatu',
+    code: 006586
+  }
+};
+```
+
+## Setting attributes
+
+- className is used to create a class attributes, and not class because this is a reserved keyword in JS.
+- For perfomance and maintenability it is recommended to use classes. 
+- It is possible to create a property for styling such as follows,
+```jsx
+style = {
+  fontWeight: 'bold',
+  fontSize: 10 
+};
+```
+- Above, a property is defined and for it to work it has to be referenced in the jsx expression as follows,
+```jsx
+render = {
+  <div> 
+    <span style={this.style}> // here the item that is being styled 
+    </span>
+  </div>
+}
+```
+- It is also possible to use inline styling as indicated below,
+```jsx
+<span style={{ fontSize: 30 }} className="badge-primary"></span>
+```
+- In the code above the style attribute is used inline to syle the element. Note the double curly braces.
 
 ### Important to note
 
