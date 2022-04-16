@@ -45,7 +45,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Martin Hinga',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -55,12 +55,12 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'My Learnings',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/martin-hin',
+            label: 'My GitHub',
             position: 'right',
           },
         ],
@@ -72,7 +72,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'My learning',
                 to: '/docs/intro',
               },
             ],
@@ -85,8 +85,8 @@ const config = {
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'linkedIn',
+                href: 'https://www.linkedin.com/in/martin-hinga/',
               },
               {
                 label: 'Twitter',
