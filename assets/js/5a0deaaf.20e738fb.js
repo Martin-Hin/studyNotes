@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstudy_notes=self.webpackChunkstudy_notes||[]).push([[8442],{1551:function(s){s.exports=JSON.parse('{"permalink":"/studyNotes/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
