@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Yes I made it!',
+    title: 'Motivation & Aspirations',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        I am an aspiring Full-Stack developer with a keen eye on UI/UX design. I am motivated to study and learn the ins and outs of web development and it&apos;s environment. I am also interested in creating chatbots and quizbots that utilize Artificial Intelligence and Machine Learning to optimize the interface and experience of the user.   
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'What you will find on this website',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        This website is dedicated to my notes that I take while I study. The main reason is to have easy access from anywhere using any device including on mobile devices. It also helps me to keep up to date with the practice and process of writing code and deploying it.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'About my Blogs',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        My blogs are about tech topics that I find interesting, and worth sharing.
       </>
     ),
   },
@@ -62,3 +59,5 @@ export default function HomepageFeatures() {
     </section>
   );
 }
+
+
