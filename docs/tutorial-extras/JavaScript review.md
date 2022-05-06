@@ -697,5 +697,120 @@ console.log(target);
 // The printed result is 6, which is now stored in target variable. 
 ```
 
+## Loops
 
+Loops allow us to write efficient code that automates to make scalable, manageable programs. Loops iterate an action until a certain condition is met. When the condition is met the loop stops and the computer moves on to the next part of the program. 
+
+### For Loop
+
+The typical for loop includes an iterator variable that usually appears in all three expressions. The iterator variable is initialized, checked against the stopping condition, and assigned a new value on each loop iteration.
+
+A for loop contains three expressions separated by ; inside the parentheses:
+
+1. An initialization starts the loop and can also be used to declare the iterator variable.
+2. A stopping condition is the condition that the iterator variable is evaluated against, if the condition evaluates to true the code block will run, and if it evaluates to false the code will stop.
+3. An iteration statement is used to update the iterator variable on each loop.
+
+Example;
+```JavaScript
+for (let counter = 5; counter < 11; counter++){
+  console.log(counter);
+}
+// Prints 5, 6, 7, 8, 9, 10
+```
+In the code above the initialization on the for loop is 'let counter = 5' so the looping will start from 5. We can say that 'counter' is the iterator variable. The stopping condition is 'counter < 11' meaning that the loop will continue as long as the iterator variable is less than 11. The iteration statement is 'counter++' which means that the value of counter will be increased by one each time. The code block inside the curly braces will execute as long as the condition is not met. The point where the loop stops is called the stop condition. 
+
+### Looping in Reverse
+
+To run a backward for loop, we must:
+
+1. Set the iterator variable to the highest desired value in the initialization expression.
+2. Set the stopping condition for when the iterator variable is less than the desired amount.
+3. The iterator should decrease in intervals after each iteration.
+
+Example;
+```JavaScript
+for (let counter = 3; counter >= 0; counter--){
+  console.log(counter);
+}
+// The loop above loops from 3 to 0
+```
+### Looping Through Arrays
+
+To loop through each element in an array, a for loop should use the array’s .length property in its condition.
+
+Exxapmle;
+```JavaScript
+const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
+for (let i = 0; i < animals.length; i++){
+  console.log(animals[i]);
+}
+// Prints Grizzly Bear, Sloth, Sea Lion
+```
+In the loop above, we’ve named our iterator variable i. This is a variable naming convention you’ll see in a lot of loops. When we use i to iterate through arrays we can think of it as being short-hand for the word index. Notice how our stopping condition checks that i is less than animals.length. Remember that arrays are zero-indexed, the index of the last element of an array is equivalent to the length of that array minus 1.
+
+Example 2;
+```JavaScript
+const vacationSpots = ['Bali', 'Paris', 'Tulum','LA'];
+
+for (let i = 0; i < vacationSpots.length; i++){
+  console.log('I would love to visit '+ vacationSpots[i]);
+}
+/*Output of the code above:
+I would love to visit Bali
+I would love to visit Paris
+I would love to visit Tulum
+I would love to visit LA*/
+```
+
+## Nested Loops
+
+A loop that runs inside of another loop is called a nested loop. One of the main uses of a nested for loop is to compare the elements in the two arrays. For each round of the outer for loop, the inner for loop will run completely.
+
+Example 1;
+```JavaScript
+for (i = 0; i < 3; i++) {
+  for (j = 0; j = 4; j++) {
+      console.log(i - j);
+  }
+}
+```
+
+Example 2;
+```JavaScript
+for (let outer=0; outer < 2; outer += 1){
+  for (let inner = 0; inner < 3; inner += 1){
+      console.log(`${outer} - ${inner}`);
+  }
+}
+/* Output:
+0 - 0
+0 - 1
+0 - 2
+1 - 0
+1 - 1
+1 - 2 */
+```
+The inner loop will run all it's iterations for each iteration of the outer loop.
+
+Example 3
+```JavaScript
+const bobsFollowers = ['Jane', 'Daniel', 'Mona', 'Jack'];
+const tinasFollowers = ['Lisa', 'Mona', 'Jane' ];
+
+const mutualFollowers = [];
+
+for (let i = 0; i < bobsFollowers.length; i++){
+  for(let j = 0; j < tinasFollowers.length; j++){
+
+   if (bobsFollowers[i] === tinasFollowers[j]){
+     mutualFollowers.push(tinasFollowers[j]);
+   }
+  }
+};
+console.log(mutualFollowers);
+// Prints [ 'Jane', 'Mona' ]
+```
+
+### While Loop
 
