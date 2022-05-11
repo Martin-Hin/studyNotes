@@ -1124,3 +1124,273 @@ console.log(startsWithS);
 
 ### .reduce method
 
+The .reduce() method returns a single value after iterating through the elements of an array, thereby reducing the array.
+
+The .reduce() method can also take an optional second parameter to set an initial value for accumulator (remember, the first argument is the callback function!)
+
+Example 1;
+
+```js
+const numbers = [1, 2, 4, 10];
+ 
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 100)  // <- Second argument for .reduce()
+ 
+console.log(summedNums); // Output: 117
+```
+
+Example 2;
+
+```js
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce(function(accumulator, currentValue) {
+  console.log('The value of accumulator: ', accumulator);
+console.log('The value of currentValue: ', currentValue);
+  return accumulator + currentValue
+}, 10);
+
+console.log(newSum);
+/* Output
+The value of accumulator:  10
+The value of currentValue:  1
+The value of accumulator:  11
+The value of currentValue:  3
+The value of accumulator:  14
+The value of currentValue:  5
+The value of accumulator:  19
+The value of currentValue:  7
+26*/
+```
+### Review for Iterators
+
+* .forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
+* .map() executes the same code on every element in an array and returns a new array with the updated elements.
+* .filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.
+* .findIndex() returns the index of the first element of an array that satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.
+* .reduce() iterates through an array and takes the values of the elements and returns a single value.
+* All iterator methods take a callback function, which can be a pre-defined function, a function expression, or an arrow function.
+
+## Objects
+
+### Creating object literals
+
+We use curly braces, {}, to designate an object literal. We fill an object with unordered data. This data is organized into key-value pairs. A key is like a variable name that points to a location in memory that holds a value. A key’s value can be of any data type in the language including functions or other objects. 
+
+Example;
+```js
+// An object literal with two key-value pairs
+let spaceship = {
+  'Fuel Type': 'diesel',
+  color: 'silver'
+};
+```
+
+### Accessing object properties
+
+1. **dot notation**
+
+There are two ways we can access an object’s property. The first way is to use the dot notation. We write the object’s name, followed by the dot operator and then the property name (key). If we try to access a property that does not exist on that object, undefined will be returned. If we try to access a property that does not exist on that object, undefined will be returned.
+
+Example;
+
+```js
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver',
+  'Fuel Type': 'Turbo Fuel',
+  numCrew: 5,
+  flightPath: ['Venus', 'Mars', 'Saturn']
+};
+
+// Write your code below
+ let crewCount = spaceship.numCrew;
+
+ let planetArray = spaceship.flightPath;
+
+ console.log(crewCount);
+ console.log(planetArray);
+
+ /* Output:
+  5
+  [ 'Venus', 'Mars', 'Saturn' ]
+ */
+```
+
+2. **Bracket notation**
+
+The second way to access a keys value is by using the bracket notation, []. To use bracket notation to access an object’s property, we pass in the property name (key) as a string.
+
+We must use bracket notation when accessing keys that have numbers, spaces, or special characters in them. Without bracket notation in these situations, our code would throw an error.
+
+With bracket notation you can also use a variable inside the brackets to select the keys of an object. This can be especially helpful when working with functions. 
+
+Example; 
+
+```js
+let returnAnyProp = (objectName, propName) => objectName[propName];
+ 
+returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
+```
+If we tried to write our returnAnyProp() function with dot notation (objectName.propName) the computer would look for a key of 'propName' on our object and not the value of the propName parameter.
+
+### Property Assignment
+
+Once we’ve defined an object, we’re not stuck with all the properties we wrote. Objects are mutable meaning we can update them after we create them. We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to add new key-value pairs to an object or change an existing property. 
+
+One of two things can happen with property assignment:
+
+1. If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value.
+2. If there was no property with that name, a new property will be added to the object.
+
+:::note
+Although we can’t reassign an object declared with const, we can still mutate it, meaning we can add new properties and change the properties that are there.
+:::
+
+Example;
+
+```js
+const spaceship = {type: 'shuttle'};
+spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable.
+spaceship.type = 'alien'; // Changes the value of the type property
+spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5'
+```
+We can delete a property from an object with the delete operator.
+
+Example;
+
+```js
+const spaceship = {
+  'Fuel Type': 'Turbo Fuel',
+  homePlanet: 'Earth',
+  mission: 'Explore the universe' 
+};
+ 
+delete spaceship.mission;  // Removes the mission property
+```
+
+### Methods
+
+When the data stored on an object is a function we call that a method. A property is what an object has, while a method is what an object does.
+
+We can include methods in our object literals by creating ordinary, comma-separated key-value pairs. The key serves as our method’s name, while the value is an anonymous function expression.
+
+```js
+const alienShip = {
+  invade: function () { 
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+
+```
+
+:::note
+With the new method syntax introduced in ES6 we can omit the colon and the function keyword.
+:::
+
+```js
+const alienShip = {
+  invade () { 
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+```
+Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses. 
+
+```js
+alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
+```
+
+### Nested Objects
+
+In application code, objects are often nested, an object might have another object as a property which in turn could have a property that’s an array of even more objects.
+
+```js
+const spaceship = {
+     telescope: {
+        yearBuilt: 2018,
+        model: '91031-XLT',
+        focalLength: 2032 
+     },
+    crew: {
+        captain: { 
+            name: 'Sandra', 
+            degree: 'Computer Engineering', 
+            encourageTeam() { console.log('We got this!') } 
+         }
+    },
+    engine: {
+        model: 'Nimbus2000'
+     },
+     nanoelectronics: {
+         computer: {
+            terabytes: 100,
+            monitors: 'HD'
+         },
+        'back-up': {
+           battery: 'Lithium',
+           terabytes: 50
+         }
+    }
+}; 
+```
+We can chain operators to access nested properties. We have to pay attention to which operator makes sense to use in each layer. The computer evaluates each expression from left to right.
+
+```js
+spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
+```
+In the code above;
+
+* First the computer evaluates spaceship.nanoelectronics, which results in an object containing the back-up and computer objects.
+* We accessed the back-up object by appending ['back-up'].
+* The back-up object has a battery property, accessed with .battery which returned the value stored there: 'Lithium'.
+
+### Pass by reference
+
+Objects are passed by reference. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently (even when the object is assigned to a const variable).
+
+```js
+const spaceship = {
+  homePlanet : 'Earth',
+  color : 'silver'
+};
+ 
+let paintIt = obj => {
+  obj.color = 'glorious gold'
+};
+ 
+paintIt(spaceship);
+ 
+spaceship.color // Returns 'glorious gold'
+```
+The function paintIt() permanently changes the color of the spaceship object. But the reassignment of the spaceship variable would not work in the same way.
+
+```js
+let spaceship = {
+  homePlanet : 'Earth',
+  color : 'red'
+};
+let tryReassignment = obj => {
+  obj = {
+    identified : false, 
+    'transport type' : 'flying'
+  }
+  console.log(obj) // Prints {'identified': false, 'transport type': 'flying'}
+ 
+};
+tryReassignment(spaceship) // The attempt at reassignment does not work.
+spaceship // Still returns {homePlanet : 'Earth', color : 'red'};
+ 
+spaceship = {
+  identified : false, 
+  'transport type': 'flying'
+}; // Regular reassignment still works.
+```
+
+In the code above;
+
+* We declared this spaceship object with let. This allowed us to reassign it to a new object with identified and 'transport type' properties with no problems.
+* When we tried the same thing using a function designed to reassign the object passed into it, the reassignment didn’t stick (even though calling console.log() on the object produced the expected result).
+* When we passed spaceship into that function, obj became a reference to the memory location of the spaceship object, but not to the spaceship variable. This is because the obj parameter of the tryReassignment() function is a variable in its own right. The body of tryReassignment() has no knowledge of the spaceship variable at all!
+* When we did the reassignment in the body of tryReassignment(), the obj variable came to refer to the memory location of the object {'identified' : false, 'transport type' : 'flying'}, while the spaceship variable was completely unchanged from its earlier value.
