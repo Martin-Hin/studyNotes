@@ -14,7 +14,7 @@ It is best practice to capitalize and CamelCase class names.
 
 ## Class Syntax
 
-```JavaScript
+```js
 class ExampleOfClass {
   constructor(name, department){
       this.name = name;
@@ -29,7 +29,7 @@ Classes are a template for creating objects, they encapsulate data with code to 
 
 To declare a class, you use class keyword with the name of the class. Example below;
 
-```JavaScript
+```js
 class Rectangle {
   constructor (height, width){
       this.height = height;
@@ -43,7 +43,7 @@ It is important to remember that classes must be defined before they can be cons
 
 This is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body and it can be accessed via the name property. Example below;
 
-```JavaScript
+```js
 // unnamed
 let Rectangle = class {
   constructor(height, width) {
@@ -98,7 +98,7 @@ We use the 'new' keyword to generate a new instance of a class. The 'new' keywor
 
 The keyword extends is used in class declarations or class expressions to create a class as a child of another class. Example;
 
-```JavaScript
+```js
 class animal {
   constructor (name) {
     this.name = name;
@@ -126,7 +126,7 @@ If there is a constructor present in the subclass, it needs to first call super(
 
 We can also extend traditional function based classes. Example;
 
-```JavaScript
+```js
 function Animal (name) {
   this.name = name
 }
@@ -152,7 +152,7 @@ Classes cannot extend regular non-constructible objects. If we want to inherit f
 
 :::
 
-```JavaScript
+```js
 const Animal = {
   speak(){
     console.log(`${this.name} makes a noise.`);
@@ -174,7 +174,7 @@ d.speak(); // Buffie makes a noise.
 
 ### If statements
 
-```JavaScript
+```js
 if (true){
   console.log('This message will print.');
 }
@@ -183,7 +183,7 @@ The if keyword is followed by parentheses which is followed by a code block or b
 
 ### If, else statements
 
-```JavaScript
+```js
 if (false) {
   console.log('The code in this block will not run.');
 } else {
@@ -226,7 +226,7 @@ if - else statements allow us to automate solutions to yes-or-no questions, also
 Ternary operators are used to simplify if - else statements.
 
 Example;
-```JavaScript
+```js
 let isNightTime = true;
  
 if (isNightTime) {
@@ -237,7 +237,7 @@ if (isNightTime) {
 ```
 The code above can also be written as follows; 
 
-```JavaScript
+```js
 isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
 ```
 #### In the code above;
@@ -251,7 +251,7 @@ isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lig
 
 We can also add an else if statement if an else statement does not evaluate to true. 
 Example;
-```JavaScript
+```js
 let stopLight = 'yellow';
  
 if (stopLight === 'red') {
@@ -272,7 +272,7 @@ A switch statment creates an alternative syntax for a long if else statement to 
 
 The switch keyword is used and initiate the code and is followed by parantheses, which contains the value which each case is going to evaluate. In the code block which is surrounded by curly braces {}, are the conditions that are going to be evaulated. The case keyword is used to make the check the values that are evaluated and if the values evaluate to truthy the code is executed, otherwise the program moves to the next line and check again what is the case. 
 
-```JavaScript
+```js
 let groceryItem = 'papaya';
  
 switch (groceryItem) {
@@ -302,14 +302,14 @@ A function declaration consists of
 
 Example of a function declaration;
 
-```JavaScript
+```js
 function name (){
   console.log('Hello World');
 }
 ```
 We call a function by writing the name of the functions and paranthesis as shown below.
 
-```JavaScript
+```js
 name();
 ```
 
@@ -321,7 +321,7 @@ name();
 
 Example of hoisiting;
 
-```JavaScript
+```js
 greetWorld(); // Output: Hello, World!
  
 function greetWorld() {
@@ -336,7 +336,7 @@ Functions can take inputs and use the inputs to perform a task. Parameters allow
 
 Example;   
 
-```JavaScript
+```js
 const rectWidth = 7;
 const rectHeight = 5;
 
@@ -361,7 +361,7 @@ We use the 'return' keyword to capture the results of the code executed in the f
 
 One of the features added in ES6 is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.
 
-```JavaScript
+```js
 function greeting (name = 'stranger') {
   console.log(`Hello, ${name}!`)
 }
@@ -381,12 +381,12 @@ By using a default parameter, we account for situations when an argument isn’t
 
 :::
 
-## Helper functions
+### Helper functions
 
 We can also use the return value of a function inside another function. These functions being called within another function are often referred to as helper functions. Since each function is carrying out a specific task, it makes our code easier to read and debug if necessary.
 
 Example;
-```JavaScript
+```js
 function monitorCount(rows, columns) {
   return rows * columns;
 };
@@ -402,12 +402,12 @@ console.log(totalCost);
 // The code above prints 4000.
 ```
 
-## Function Expressions
+### Function Expressions
 
 The other way to define functions is to use function expressions. In a function expression, the function name is usually omitted. The function without a name is called an anonymous function. A function expression is stored in a variable to refer to it.
 
 Example;
-```JavaScript
+```js
 const plantNeedsWater = function(day){
   if (day === 'Wednesday') {
     return true;
@@ -428,21 +428,21 @@ Unlike function declarations,  function expressions cannot be hoisted. So they c
 
 :::
 
-## Arrow functions
+### Arrow functions
 
 ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
 
 Arrow functions remove the need to type out the keyword function every time you need to create a function. Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { }.
 
 Example;
-```JavaScript
+```js
 const rectangleArea = (width, height) => {
   let area = width * height;
   return area;
 };
 ```
 
-## Concise Body Arrow Functions
+### Concise Body Arrow Functions
 
 These is the most condensed form of functions provided by ES6. There are different ways to refactor arrow function syntax. A look at a few.
 
@@ -450,7 +450,7 @@ These is the most condensed form of functions provided by ES6. There are differe
 
 Example;
 
-```JavaScript
+```js
 //Zero paremeters will look like the code below,
 const functionName = () => {};
 
@@ -464,7 +464,7 @@ const functionName = (paramOne, paramTwo) => {};
 2. A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.
 
 Example;
-```JavaScript
+```js
 // Single line block code looks a follows,
 const sumNumbers = number => number + number;
 
@@ -485,12 +485,12 @@ const sumNumbers = number => {
 
 Variables can exist inside or outside blocks
 
-## Global Scope
+### Global Scope
 
 Global variables, variables are the ones declared outside of blocks. They can be accessed by any code in the program including code inside of blocks.
 
 Example;
-```JavaScript
+```js
 let satellite = 'The Moon'
 let galaxy = 'The Milky Way'
 let stars = 'North Star'
@@ -505,12 +505,12 @@ console.log(callMyNightSky());
 // Notice how satellite, galaxy, and stars are global variables that are being accessed from the in the function.
 ```
 
-## Block Scope
+### Block Scope
 
 When code is defined in block scope it can only be accessed within the curly braces {}. It is called a block scope variable because it is only available to the lines of code within that block. They are also called local variables.
 
 Example;
-```JavaScript
+```js
 const logSkyColor = () => {
   let color = 'blue'; 
   console.log(color); // blue 
@@ -524,7 +524,7 @@ In the code above;
 * Within the function, the color variable is only available within the curly braces of the function.
 * If we try to log the same variable outside the function, it throws a ReferenceError.
 
-## Scope pollution
+### Scope pollution
 
 Having too many global variable can cause problems in the program. When we declare global variables, they go to the global namespace. The global namespace allows the variables to be accessible from anywhere in the program. These variables remain there until the program finishes which means our global namespace can fill up really quickly.
 
@@ -533,7 +533,7 @@ Scope pollution is when we have too many global variables that exist in the glob
  Scope pollution makes it difficult to keep track of our different variables and sets us up for potential accidents. For example, globally scoped variables can collide with other variables that are more locally scoped, causing unexpected behavior in our code.
 
  Example of scope pollution;
- ```JavaScript
+ ```js
  let num = 50;
  
 const logNum = () => {
@@ -559,7 +559,7 @@ While it’s important to know what global scope is, it’s best practice to not
 
 :::
 
-## Practicing Good Scoping
+### Practicing Good Scoping
 
 Block scope is a powerful tool in JavaScript, since it allows us to define variables with precision, and not pollute the global namespace. If a variable does not need to exist outside a block— it shouldn’t!
 
@@ -578,7 +578,7 @@ Each content item inside an array is called an element.
 We can also save an array to a variable.
 
 Example;
-```JavaScript
+```js
 const hobbies = [ 'Basketball ','Programming ','Swimming ']; 
 console.log(hobbies);
 ```
@@ -590,7 +590,7 @@ The first item in an array will be at position 0 or also called index 0.
 We use bracket notation, [] with the index after the name of the array to access the element.
 
 Example;
-```JavaScript
+```js
 const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
 const listItem = famousSayings[0];
 console.log(listItem);
@@ -607,7 +607,7 @@ console.log(famousSayings[3]);
 Once you have access to an element in an array, you can update its value.
 
 Example;
-```JavaScript
+```js
 let groceryList = ['bread', 'tomatoes', 'milk'];
 groceryList[1] = 'avocados'
 
@@ -624,7 +624,7 @@ Variables declared using the const keyword cannot be reassigned but elements in 
 One of an array’s built-in properties is length and it returns the number of items in the array. We access the .length property just like we do with strings.
 
 Example;
-```JavaScript
+```js
 const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];
 console.log(objectives.length);
 
@@ -637,7 +637,7 @@ Methods are specifically called on arrays to make common tasks, like adding and 
 The .push() method allows us to add items to the end of an array.
 
 Example;
-```JavaScript
+```js
 const chores = ['wash dishes', 'do laundry', 'take out trash'];
 chores.push('mop the floor', 'Iron my clothes');
 
@@ -659,7 +659,7 @@ The method returns the value of the last element. For example, we can store the 
 The .pop() method mutates the initial array.
 
 Example;
-```JavaScript
+```js
 const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
 
 
@@ -688,7 +688,7 @@ There are many other methods that are availabe in JavaScript some of them includ
 Arrays can store other arrays and a nested array is formed when an array contains another array.
 
 Example;
-```JavaScript
+```js
 const numberClusters = [[1,2], [3,4], [5,6]];
 const target = numberClusters[2][1];
 
@@ -712,7 +712,7 @@ A for loop contains three expressions separated by ; inside the parentheses:
 3. An iteration statement is used to update the iterator variable on each loop.
 
 Example;
-```JavaScript
+```js
 for (let counter = 5; counter < 11; counter++){
   console.log(counter);
 }
@@ -729,7 +729,7 @@ To run a backward for loop, we must:
 3. The iterator should decrease in intervals after each iteration.
 
 Example;
-```JavaScript
+```js
 for (let counter = 3; counter >= 0; counter--){
   console.log(counter);
 }
@@ -740,7 +740,7 @@ for (let counter = 3; counter >= 0; counter--){
 To loop through each element in an array, a for loop should use the array’s .length property in its condition.
 
 Exxapmle;
-```JavaScript
+```js
 const animals = ['Grizzly Bear', 'Sloth', 'Sea Lion'];
 for (let i = 0; i < animals.length; i++){
   console.log(animals[i]);
@@ -750,7 +750,7 @@ for (let i = 0; i < animals.length; i++){
 In the loop above, we’ve named our iterator variable i. This is a variable naming convention you’ll see in a lot of loops. When we use i to iterate through arrays we can think of it as being short-hand for the word index. Notice how our stopping condition checks that i is less than animals.length. Remember that arrays are zero-indexed, the index of the last element of an array is equivalent to the length of that array minus 1.
 
 Example 2;
-```JavaScript
+```js
 const vacationSpots = ['Bali', 'Paris', 'Tulum','LA'];
 
 for (let i = 0; i < vacationSpots.length; i++){
@@ -763,12 +763,12 @@ I would love to visit Tulum
 I would love to visit LA*/
 ```
 
-## Nested Loops
+### Nested Loops
 
 A loop that runs inside of another loop is called a nested loop. One of the main uses of a nested for loop is to compare the elements in the two arrays. For each round of the outer for loop, the inner for loop will run completely.
 
 Example 1;
-```JavaScript
+```js
 for (i = 0; i < 3; i++) {
   for (j = 0; j = 4; j++) {
       console.log(i - j);
@@ -777,7 +777,7 @@ for (i = 0; i < 3; i++) {
 ```
 
 Example 2;
-```JavaScript
+```js
 for (let outer=0; outer < 2; outer += 1){
   for (let inner = 0; inner < 3; inner += 1){
       console.log(`${outer} - ${inner}`);
@@ -794,7 +794,7 @@ for (let outer=0; outer < 2; outer += 1){
 The inner loop will run all it's iterations for each iteration of the outer loop.
 
 Example 3
-```JavaScript
+```js
 const bobsFollowers = ['Jane', 'Daniel', 'Mona', 'Jack'];
 const tinasFollowers = ['Lisa', 'Mona', 'Jane' ];
 
@@ -813,4 +813,314 @@ console.log(mutualFollowers);
 ```
 
 ### While Loop
+
+Example;
+```js
+// A for loop that prints 1, 2, and 3
+for (let counterOne = 1; counterOne < 4; counterOne++){
+  console.log(counterOne);
+}
+ 
+// A while loop that prints 1, 2, and 3
+let counterTwo = 1;
+while (counterTwo < 4) {
+  console.log(counterTwo);
+  counterTwo++;
+}
+```
+In the example above, 
+
+* The counterTwo variable is declared before the loop. We can access it inside our while loop since it’s in the global scope.
+* We start our loop with the keyword while followed by our stopping condition, or test condition. This will be evaluated before each round of the loop. While the condition evaluates to true, the block will continue to run. Once it evaluates to false the loop will stop.
+* Next, we have our loop’s code block which prints counterTwo to the console and increments counterTwo.
+
+:::note
+
+**An infite loop** is when a loop runs without stopping because the stop condition is not met, or in other words that the testing condition always evaluates to true and the loop never stops running. 
+
+:::
+
+:::caution
+
+**An infite loop** can take up all of your computer’s processing power potentially freezing your computer.
+
+:::
+
+:::tip
+
+#### Infinite loop example
+In our example of a while loop above, If we didn’t increment counterTwo in our block, counterTwo would always have its initial value of '1'. That would mean the testing condition 'counterTwo < 4', would always evaluate to 'true' and our loop would never stop running!
+
+:::
+
+```js
+// An example of an infinite loop
+let counterTwo = 1;
+while (counterTwo < 4) {
+  console.log(counterTwo);
+        //counterTwo++; If this part of the code is omitted it will become an infinite loop.
+}
+```
+
+While loops are best used in situations where we want a loop to execute an undetermined number of times.
+
+### Do While Statements
+
+A do...while statement says to do a task once and then keep doing it until a specified condition is no longer met.
+
+```js
+let cupsOfSugarNeeded = 6;
+let cupsAdded = 7;
+
+do {
+ cupsAdded++
+ console.log(cupsAdded + ' cups were added') 
+} while (cupsAdded < cupsOfSugarNeeded);
+// The code above will be executed once even though the condition executes to false.  
+```
+
+### The break Keyword
+
+The break keyword is used to stop the code from continuing to execute the loop even if the original stopping condition has not been met yet. It is added in the code block.
+
+```js
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Write your code below
+for (let i = 0; i < rapperArray.length; i++){
+  console.log(rapperArray[i]);
+  if (rapperArray[i] === 'Notorious B.I.G.'){
+      break;
+  }
+}
+console.log("And if you don't know, now you know.");
+/* Output
+Lil' Kim
+Jay-Z
+Notorious B.I.G.
+And if you don't know, now you know.
+*/
+```
+
+## Higher Order functions
+
+### Functions as Data
+
+JavaScript functions behave like any other data type in the language; we can assign functions to variables, and we can reassign them to new variables.
+
+In JavaScript, functions are first class objects. This means that, like other objects you’ve encountered, JavaScript functions can have properties and methods.
+
+Since functions are a type of object, they have properties such as .length and .name, and methods such as .toString(). Functions are special because we can invoke them, but we can still treat them like any other type of data.
+
+```js
+const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
+  for(let i = 1; i <= 1000000; i++) {
+    if ( (2 + 2) != 4) {
+      console.log('Something has gone very wrong :( ');
+    }
+  }
+};
+
+const isTwoPlusTwo = checkThatTwoPlusTwoEqualsFourAMillionTimes;
+
+isTwoPlusTwo();
+
+console.log(isTwoPlusTwo.name);
+// Prints checkThatTwoPlusTwoEqualsFourAMillionTimes as the name when we try to access the name property of the function.
+```
+### Functions as Parameters
+
+As we alredy know a parameter is a placeholder for the data that gets passed into a function, Since functions can behave like any other type of data in JavaScript, functions can accept other functions as parameters.
+
+A higher-order function is a function that either accepts functions as parameters, returns a function, or both!
+
+We call functions that get passed in as parameters callback functions. Callback functions get invoked during the execution of the higher-order function.
+
+When we invoke a higher-order function, and pass another function in as an argument, we don’t invoke the argument function. Invoking it would evaluate to passing in the return value of that function call. With callback functions, we pass in the function itself by typing the function name without the parentheses.
+
+```js
+const addTwo = num => {
+  return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+ let checkA = val + 2;
+ let checkB = func(val);
+  if ( checkA === checkB ){
+    return func(val);
+    
+  } else {
+    return "inconsistent results."
+  }
+}
+
+console.log(checkConsistentOutput(addTwo, 3));
+```
+
+## Iterators
+
+The built-in JavaScript array methods that help us iterate are called iteration methods, at times referred to as iterators. Iterators are methods called on arrays to manipulate elements and return values.
+
+### .forEach() method
+
+The .forEach() will execute the same code for each element of an array.
+
+```js
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Iterate over fruits below
+
+fruits.forEach(function(fruitToEat){
+  console.log(`I want to eat a ${fruitToEat}.`);
+});
+/* Output
+I want to eat a mango.
+I want to eat a papaya.
+I want to eat a pineapple.
+I want to eat a apple. */
+```
+fruits.forEach() calls the forEach method on the fruits array. .forEach() takes an argument of callback function. Remember, a callback function is a function passed as an argument into another function. .forEach() loops through the array and executes the callback function for each element. During each execution, the current element is passed as an argument to the callback function. The return value for .forEach() will always be undefined.
+
+We can also pass a callback for .forEach() by using arrow function syntax as shown below.
+
+```js
+groceries.forEach(groceryItem => console.log(groceryItem));
+```
+We can also define functions beforehand to be used a callback function as shown below.
+
+```js
+function printGrocery(element){
+  console.log(element);
+}
+ 
+groceries.forEach(printGrocery);
+```
+The above example uses a function declaration but you can also use a function expression or arrow function as well.
+
+::: Note
+Because developers have different stylistic preferences, it is important to know the different ways how to pass in callback functions as arguments in iterators. 
+:::
+
+### .map() method
+
+When .map() is called on an array, it takes an argument of a callback function and returns a new array!  .map() works in a similar manner to .forEach()— the major difference is that .map() returns a new array.
+
+```js
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich',
+ 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+
+// New secretMessage array below
+const secretMessage = animals.map(animals => animals[0]);
+
+console.log(secretMessage.join(''));
+
+
+const bigNumbers = [100, 200, 300, 400, 500];
+
+// New smallNumbers array below
+const smallNumbers = bigNumbers.map(bigNumbers => bigNumbers/100
+);
+
+console.log(smallNumbers);
+
+/* Prints
+HelloWorld
+[ 1, 2, 3, 4, 5 ]*/
+```
+1. In the code above we used .map() method to create a new array that contains the first character of each string in the animals array, and saved the new array to a const variable named secretMessage.
+
+2. We used the .map() method to divide all the numbers in bigNumbers by 100, and saved the returned values to a variable declared with const called smallNumbers.
+
+
+### .filter method
+
+.filter() returns a new array. However, .filter() method returns an array of elements after filtering out certain elements from the original array. The callback function for the .filter() method should return true or false depending on the element that is passed to it. The elements that cause the callback function to return true are added to the new array. 
+Example;
+
+```js
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+ 
+const shortWords = words.filter(word => {
+  return word.length < 6;
+});
+
+console.log(words); // Output: ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+console.log(shortWords); // Output: ['chair', 'music', 'brick', 'pen', 'door']
+```
+ The words array was not mutated, i.e. changed, and shortWords is a new array.
+```JavaScript
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+// Call .filter() on randomNumbers below
+const smallNumbers = randomNumbers.filter(randomNumbers => randomNumbers < 250 );
+
+console.log(smallNumbers);
+
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+
+// Call .filter() on favoriteWords below
+
+const longFavoriteWords = favoriteWords.filter(favoriteWords => favoriteWords.length > 7);
+
+console.log(longFavoriteWords);
+
+/*Output;
+[ 200, 3.14, 7, 13 ]
+[ 'nostalgia', 'hyperbole', 'esoteric' ]
+```
+
+### .findIndex method
+
+Calling .findIndex() on an array will return the index of the first element that evaluates to true in the callback function.
+Example;
+```JavaScript
+const jumbledNums = [123, 25, 78, 5, 9]; 
+ 
+const lessThanTen = jumbledNums.findIndex(num => {
+  return num < 10;
+});
+
+console.log(lessThanTen); // Output: 3 
+console.log(jumbledNums[3]); // Output: 5
+```
+In the code above;
+
+* jumbledNums is an array that contains elements that are numbers.
+* const lessThanTen = declares a new variable that stores the returned index number from invoking .findIndex().
+* The callback function is an arrow function that has a single parameter, num. Each element in the jumbledNums array will be passed to this function as an argument.
+* num < 10; is the condition that elements are checked against. .findIndex() will return the index of the first element which evaluates to true for that condition.
+
+:::note
+If there isn’t a single element in the array that satisfies the condition in the callback, then .findIndex() will return -1.
+:::
+
+Example of when a no element in the array satisfies the condition;
+```js
+const greaterThan1000 = jumbledNums.findIndex(num => {
+  return num > 1000;
+});
+ 
+console.log(greaterThan1000); // Output: -1
+```
+```js
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+
+const foundAnimal = animals.findIndex(animals => {
+  return animals ==='tiger'
+});
+
+console.log(foundAnimal);
+
+const startsWithS = animals.findIndex( animals => {
+  return animals[0] === 's' 
+});
+
+console.log(startsWithS);
+
+// Output 1 and 3 
+```
+
+### .reduce method
 
