@@ -1395,4 +1395,44 @@ In the code above;
 * When we passed spaceship into that function, obj became a reference to the memory location of the spaceship object, but not to the spaceship variable. This is because the obj parameter of the tryReassignment() function is a variable in its own right. The body of tryReassignment() has no knowledge of the spaceship variable at all!
 * When we did the reassignment in the body of tryReassignment(), the obj variable came to refer to the memory location of the object {'identified' : false, 'transport type' : 'flying'}, while the spaceship variable was completely unchanged from its earlier value. 
 
+### Looping through objects
+
+For objects we use the for...in syntax to loop through objects. It wil execute a given block of code for each property in an object. 
+
+```js
+let spaceship = {
+    crew: {
+    captain: { 
+        name: 'Lily', 
+        degree: 'Computer Engineering', 
+        cheerTeam() { console.log('You got this!') } 
+        },
+    'chief officer': { 
+        name: 'Dan', 
+        degree: 'Aerospace Engineering', 
+        agree() { console.log('I agree, captain!') } 
+        },
+    medic: { 
+        name: 'Clementine', 
+        degree: 'Physics', 
+        announce() { console.log(`Jets on!`) } },
+    translator: {
+        name: 'Shauna', 
+        degree: 'Conservation Science', 
+        powerFuel() { console.log('The tank is full!') } 
+        }
+    }
+}; 
+
+for (let crewMember in spaceship.crew) {
+  console.log(`${spaceship.crew[crewMember].name} : ${spaceship.crew[crewMember].degree}`);
+}
+/*  Output
+Lily : Computer Engineering
+Dan : Aerospace Engineering
+Clementine : Physics
+Shauna : Conservation Science
+*/
+```
+Our for...in will iterate through each element of the spaceship.crew object. In each iteration, the variable crewMember is set to one of spaceship.crew‘s keys, enabling us to log a list of crew members’ name and degree. 
 
