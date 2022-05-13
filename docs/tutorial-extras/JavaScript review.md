@@ -1436,3 +1436,110 @@ Shauna : Conservation Science
 ```
 Our for...in will iterate through each element of the spaceship.crew object. In each iteration, the variable crewMember is set to one of spaceship.crew‘s keys, enabling us to log a list of crew members’ name and degree. 
 
+## Advanced objects
+
+Advanced objects are not a different type of object, they are mentioned as advanced, because of the advanced features we can implement to our objects. We can define an object like below:
+
+```js
+let peson = {
+  name: 'Axel',
+  location: 'US',
+  isAdvsor: true
+}
+```
+But if we wanted to make more people objects it would easily become cumbersome. So to avoid this we use the advanced features of objects. 
+
+An advanced feature we can use is the Factory function and it can purposely be created to make objects. The example below explains more.
+
+```js
+const makeCodecademyPeople = (name, location, isAdvisor) => {
+  return {
+    name,
+    location,
+    isAdvisor
+    }
+	};
+};
+
+//now, calling the function will create a new object that we can assign to 
+//a variable:
+let axelAdvisor = makeCodecademyPeople('Axel', 'US', true);
+
+console.log(axelAdvisor.name) //Axel
+```
+What's advanced is the tools that we are learning to improve how we interact and build objects.
+
+:::note
+There are 4 ways to create objects: 
+1. Using object literals,
+2. Using factory functions,
+3. Using Constructor functions,
+4. Using the class keyword (almost similar to creating a function constructor). 
+:::
+
+### Object literals for objects.
+
+Below is an example of how we use object literals to create an object.
+
+```js
+const car = {
+  model: 'Nissan',
+  color: 'Green',
+  ['Fuel type']: 'Diesel'
+}
+```
+
+### Factory functions for objects
+
+A factory function is any function which is not a class or constructor that returns a (presumably new) object. Factory functions have always been attractive in JavaScript because they offer the ability to easily produce object instances without diving into the complexities of classes and the new keyword.
+
+Example;
+
+```js
+function createCircle (radius){
+  return{
+  radius,
+  draw: function(){
+    console.log('draw');
+    }
+  }
+};
+
+const circle = createCircle(1);
+circle.draw();
+// Output is a circle object with a radius of 1
+```
+
+In the code above we can re-use the createCircle function to create several objects dynamically. 
+
+### Constructor functions for objects
+
+The naming convention for constructor functions is different, we use the PascalCase and camelCase. We use the 'this' keyword to set the properties of the object instead of returning an object. 'this' is a reference to the object that is executing the code. If we have a new empty object in the memory we use the 'this' keyword to refence it and then the dot notation to set various properties to that object.  
+
+Example;
+
+```js
+function CreateCircle (radius){
+  this.radius = radius;
+  this.draw = function (){
+      console.log('draw');
+  }
+}
+
+const circle = new CreateCircle(2);
+// The output is going to be a new object with radius and draw method as its properties. 
+```
+
+In the code above we create a function and then use the this keyword in the function body to set the properties of the object. We also added a method called draw. A method is a function inside another function. 
+
+:::note
+Every object in JavaScript has a property called constructor, which references the function that was used to construct or to create that object. To find it, write on the console <objectname.constructor> and hit return. This will return the function that was used to create that object. 
+:::
+
+Examples of built-in JavaScript constructors are;
+
+```js
+new String(); // Which is called every time we use the string literals ('', "", ``)
+new Boolean(); // true, false. Boolean literals
+new Number(); // 1, 2, 3, 4... Number literals
+```
