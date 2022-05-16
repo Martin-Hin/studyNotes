@@ -1493,7 +1493,24 @@ const car = {
 
 A factory function is any function which is not a class or constructor that returns a (presumably new) object. Factory functions have always been attractive in JavaScript because they offer the ability to easily produce object instances without diving into the complexities of classes and the new keyword.
 
-Example;
+Examples;
+
+```js
+const monsterFactory = (name, age, energySource, catchPhrase) => {
+  return { 
+    name: name,
+    age: age, 
+    energySource: energySource,
+    scare() {
+      console.log(catchPhrase);
+    } 
+  }
+};
+
+const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
+ghost.scare(); // 'BOO!'
+```
+
 
 ```js
 function createCircle (radius){
@@ -1533,7 +1550,7 @@ const circle = new CreateCircle(2);
 In the code above we create a function and then use the this keyword in the function body to set the properties of the object. We also added a method called draw. A method is a function inside another function. 
 
 :::note
-Every object in JavaScript has a property called constructor, which references the function that was used to construct or to create that object. To find it, write on the console <objectname.constructor> and hit return. This will return the function that was used to create that object. 
+Every object in JavaScript has a property called constructor, which references the function that was used to construct or to create that object. To find it, write on the console 'objectname.constructor' and hit return. This will return the function that was used to create that object. 
 :::
 
 Examples of built-in JavaScript constructors are;
@@ -1542,4 +1559,133 @@ Examples of built-in JavaScript constructors are;
 new String(); // Which is called every time we use the string literals ('', "", ``)
 new Boolean(); // true, false. Boolean literals
 new Number(); // 1, 2, 3, 4... Number literals
+```
+
+Objects are collections of related data and functionality. We store that functionality in methods on our objects.
+
+### this keyword
+
+The this keyword references the calling object which provides access to the calling object’s properties.
+
+```js
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  provideInfo(){
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}.`
+  }
+};
+
+console.log(robot.provideInfo());
+
+// output; I am 1E78V2 and my current energy level is 100.
+```
+In the example above, the calling object is robot and by using 'this' keyword we’re accessing the robot object itself, and then the provideInfo property of robot by using property dot notation. If we use the 'this' keyword in a method then the value of this is the calling object.
+
+:::note
+It is good to avoid using arrow functions when using this in a method! Because when we use the arrow function and the 'this' keyword, it points to a global object and not the calling object.
+:::
+ 
+```js
+const goat = {
+  dietType: 'herbivore',
+  makeSound() {
+    console.log('baaa');
+  },
+  diet: () => {
+    console.log(this.dietType);
+  }
+};
+ 
+goat.diet(); // Prints undefined
+```
+In the example above the code does not work as intended because the 'this' keyword in the arrow function points to a globally scoped object and not the goat object. Arrow functions inherently bind, or tie, an already defined 'this' value to the function itself that is NOT the calling object.
+
+### Privacy in objects
+
+When discussing privacy in objects, we define it as the idea that only certain properties should be mutable or able to change in value.
+JavaScript developers follow naming conventions that signal to other developers how to interact with a property. One common convention is to place an underscore _ before the name of a property to mean that the property should not be altered.
+
+### Getters
+
+Getters are methods that get and return the internal properties of an object. But they can do more than just retrieve the value of a property! 
+
+```js
+const person = {
+  _firstName: 'John',
+  _lastName: 'Doe',
+  get fullName() {
+    if (this._firstName && this._lastName){
+      return `${this._firstName} ${this._lastName}`;
+    } else {
+      return 'Missing a first name or a last name.';
+    }
+  }
+}
+ 
+// To call the getter method: 
+person.fullName; // 'John Doe'
+```
+In the code above;
+
+* We use the get keyword followed by a function.
+* We use an if...else conditional to check if both _firstName and _lastName exist (by making sure they both return truthy values) and then return a different value depending on the result.
+* We can access the calling object’s internal properties using this. In fullName, we’re accessing both this._firstName and this._lastName.
+* In the last line we call fullName on person. In general, getter methods do not need to be called with a set of parentheses. Syntactically, it looks like we’re accessing a property.
+
+
+```js
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  get energyLevel(){
+    if ( typeof this._energyLevel === 'number'){
+      return 'My current energy level is ' + this._energyLevel
+    } else {
+      return 'System malfunction: cannot retrieve energy level'
+    }
+  }
+};
+
+console.log(robot.energyLevel);
+// Output; My current energy level is 100
+```
+
+### Advantages of using getter methods
+
+* Getters can perform an action on the data when getting a property.
+* Getters can return different values using conditionals.
+* In a getter, we can access the properties of the calling object using this.
+* The functionality of our code is easier for other developers to understand.
+
+Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. One workaround is to add an underscore before the property name like we did in the example above.
+
+### Setters
+
+We can also create setter methods which reassign values of existing properties within an object.
+
+```js
+const person = {
+  _age: 37,
+  set age(newAge){
+    if (typeof newAge === 'number'){
+      this._age = newAge;
+    } else {
+      console.log('You must assign a number to age');
+    }
+  }
+};
+```
+In the example above;
+
+* We can perform a check for what value is being assigned to this._age.
+* When we use the setter method, only values that are numbers will reassign this._age
+* There are different outputs depending on what values are used to reassign this._age.
+
+Then to use the setter method,
+
+```js
+person.age = 40;
+console.log(person._age); // Logs: 40
+person.age = '40'; // Logs: You must assign a number to age
 ```
