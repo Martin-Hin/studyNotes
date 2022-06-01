@@ -1,0 +1,75 @@
+---
+sidebar_position: 8
+---
+
+## What is machine learning?
+
+Arthur Samuels coined the name machine learning in his paper that delved into the use of machine learning in the game of checkers to verify that a computer can be programmed so that it plays a better game of checkers than can be played by the person who programmed it. 
+
+He introduced machine learning in his paper as a subfield of computer science that gives computers the ability to learn without the ability to be programmed. A key concept from Arthur Samuels was the concept of self-learning. Self-learning refers to the application of statistical modeling to detect patterns and improve perfomance based on data and empirical information all without direct programming commands.
+
+In machine learning, Data is fed into the machine, an algorithm is selected, hyperparameters are configured and adjusted and then the machine is instructed to do its analysis. The machine tries to find patterns in the data by trial and error process. The machines data model that has been formed from the analysis of data patterns can be used to predict future values. The the machine is formulating decisions based on experience and mimicking the process of human-based decision-making. 
+
+The difference between traditional programming and machine learning is that the machine is fed data, and it uses the programmers nominated algorithms and then the final prediction is determined by the machine through self-learning and data modeling.
+
+Machine learning models can be trained to form decisions based on past experience. An example is creating a model that detects spam email messages. The model is trained to block emails with suspicious subject lines and body text containing three or more flagged keywords: dear friend, free, invoice, PayPal, viagra, casino, payment, bankruptcy, and winner.
+
+Machine learning entails a three-step process: Data > Model > Action.
+
+## Training and test data
+
+In machine learning, data is split into training data and test data. The first split of data, i.e. the initial reserve of data you use to develop your model, provides the training data. New rules or modifications must then be added. 
+
+After you have successfully developed a model based on the training data and are satisfied with its accuracy, you can then test the model on the remaining data, known as the test data. Once you are satisfied with the results of both the training data and test data, the machine learning model is ready to filter incoming data and generate decisions on how to categorize those incoming data. 
+
+## Machine Learning Categories
+
+There are three main categories of machine learning, supervised, unsupervised, and reinforcement.
+
+### Supervised Machine learning
+
+As the first branch of machine learning, supervised learning concentrates on learning patterns through connecting the relationship between variables and known outcomes and working with labeled datasets. The machine is fed with sample data that has various features, and the correct value output of the data. Both the feature values and the output values are known which means that the data set is labeled. The algorithm then deciphers the patterns that exist within the sample data and creates a model that allows it to reproduce the same underlying rules with new data. 
+
+After the machine deciphers the rules and patterns of the data, it creates what is known as a model: an algorithmic equation for producing an outcome with new data based on the rules derived from the training data. Once the model is prepared, it can be applied to new data and tested for accuracy. After the model has passed both the training and test data stages, it is ready to be
+applied and used in the real world.
+
+### Supervised machine learning algorithms
+
+Supervised learning algorithms include; regression analysis, decision trees, k-nearest neighbors, neural networks, and support vector machines. 
+
+## Unsupervised Learning
+
+In the case of unsupervised learning, not all variables and data patterns are classified. 
+
+## Reinforcement learnig
+
+Reinforcement learning is very similar, where algorithms are set to train the model through continuous learning. A standard reinforcement learning model has measurable performance criteria where outputs are not tagged—instead, they are graded.
+
+Reinforcement learning uses the Q-learning. In Q-learning, we start with a set environment of states which is represented with a symbol 'S'. And a set of possible actions to take which are represented by a symbol 'A'. The third symbol is 'Q', which is the starting value and has an initial value of 0. The machine then uses the set of actions to move around the environment and two main things happen to 'Q', it drops if negative things occur after a given state or action and increases if a positive thing occurs in the given state or action. The machine learns to match the action or state that maintains the highest level of 'Q'. It learns initially through the process of random movements (actions) through the given conditions (state). It records the results the main reward and penalties and how they impact the level of 'Q', and stores them to use them to inform or optimize the future.
+
+## Data scrubbing
+
+Scrubbing is the technical process of refining your dataset to make it more workable. This can involve modifying and sometimes removing incomplete, incorrectly formatted, irrelevant or duplicated data. It can also entail converting text-based data to numerical values and the redesigning of features. 
+
+### Feature selection
+
+To generate the best results from your data, it is important to first identify the variables most relevant to your hypothesis. 
+
+### One-hot Encoding
+
+### Binning
+
+### Missing Data
+
+## Setting up your data
+
+
+
+
+
+
+## Extra points
+
+Machine learning can provide an entry point for people interested in Artificial intelligence because it is more narrow and practical lens of study compared to the wider AI.
+
+Machine learning is related to data mining which since some algorithms such as k-means clustering, association analysis and regression analysis are applied in both to analyze data. The biggest difference is that machine learning focuses on the incremetal process of self-learning and data modelling to form predictions about the future, while data mining narrows in on cleaning large data sets to find to find valuable insights about the past. 
