@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://martin-hin.github.io/studyNotes/blog</id>
-    <title>My Site Blog</title>
+    <title>Martin Hinga Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://martin-hin.github.io/studyNotes/blog"/>
-    <subtitle>My Site Blog</subtitle>
-    <icon>https://martin-hin.github.io/studyNotes/img/favicon.ico</icon>
+    <subtitle>Martin Hinga Blog</subtitle>
+    <icon>https://martin-hin.github.io/studyNotes/img/favicon_1.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
