@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Martin Hinga',
+  tagline: 'Notes, Blogs, all my tech escapades',
   url: 'https://martin-hin.github.io',
   baseUrl: '/studyNotes/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon_1.ico',
   organizationName: 'Martin-Hin', // Usually your GitHub org/user name.
   projectName: 'studyNotes', // Usually your repo name.
   deploymentBranch: 'gh-pages',
@@ -48,7 +48,7 @@ const config = {
         title: 'Home',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo_1.svg',
         },
         items: [
           {
@@ -72,7 +72,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'My learning',
+                label: 'My notes',
                 to: '/docs/intro',
               },
             ],

@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Motivation & Aspirations',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/motivation2.svg').default,
     description: (
       <>
         I am an aspiring Full-Stack developer with a keen eye on UI/UX design. I am motivated to study and learn the ins and outs of web development and it&apos;s environment. I am also interested in creating chatbots and quizbots that utilize Artificial Intelligence and Machine Learning to optimize the interface and experience of the user.   
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'What you will find on this website',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/what_you_find_in_site.svg').default,
     description: (
       <>
         This website is dedicated to my notes that I take while I study. The main reason is to have easy access from anywhere using any device including on mobile devices. It also helps me to keep up to date with the practice and process of writing code and deploying it.
@@ -22,8 +22,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'About my Blogs',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'My Blogs',
+    Svg: require('@site/static/img/about_blogs.svg').default,
     description: (
       <>
         My blogs are about tech topics that I find interesting, and worth sharing.
