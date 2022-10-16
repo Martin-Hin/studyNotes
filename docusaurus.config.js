@@ -45,7 +45,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Martin Hinga',
+        title: 'Home',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -55,7 +55,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'My Learnings',
+            label: 'My notes',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
