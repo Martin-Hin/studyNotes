@@ -13,5 +13,6 @@ sidebar_position: 1
 7. Git & GitHub
 8. Markdown
 9. Zsh / Bash / Command-line
-10. Deploying websites
-11. Redux
+10. Redux
+11. Linear data structures
+12. Deployment configuration
