@@ -9,7 +9,10 @@ sidebar_position: 1
 3. Vanilla JavaScript
 4. REACT.js
 5. Python
-7. NODE.js
-8. Git & GitHub
-9. Markdown
-10. Zsh / Bash / Command-line
+6. NODE.js
+7. Git & GitHub
+8. Markdown
+9. Zsh / Bash / Command-line
+10. Redux
+11. Linear data structures
+12. Deployment configuration
