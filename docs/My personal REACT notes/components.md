@@ -18,11 +18,11 @@ class "Counter" extends Component {
 export default Counter;
 ```
 
-In the code above I defined a component called **Counter**.
+In the code above I defined a component called "**Counter**".
 The counter class above extends the component class class that is imported from the react module.
 The Component class has methods that are inherited into the Counter class.
 The h1 element that is returned in the code above is a .jsx expression which gets compiled to React.createElement and that is the reason why it is imported from the react object on the top of the code.
-It is also possible to define and export the compnent on the same line as indicated below.
+It is also possible to define and export the component on the same line as indicated below.
 
 ```jsx
 export default class "Counter" extends Component {
@@ -35,7 +35,7 @@ export default class "Counter" extends Component {
 
 ## Creating a react app
 
-1. In the command line, enter the command below and wait for the project to be ready. Note that appname should be the name you want to give the app.
+1. In the command line, enter the command below and wait for the project to be ready. Note that "appname" should be the name you want to give the app.
 
 ```bash
 create-react-app <appname>
@@ -48,7 +48,7 @@ npm start
 
 ```
 
-## Importing a react app
+## Importing a component
 
 To import a component into index.js, type the code below, in this case I assume that the component being imported is the one defined above.
 
