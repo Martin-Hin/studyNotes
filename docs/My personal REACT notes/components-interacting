@@ -83,3 +83,25 @@ import { faveSongs, faveMovie } from "./entertainment.js";
 Another way that components interact is through passing information to another component using props. Information that is passed to another component is known as "props".
 
 A component's props is an object that holds information about that component. To see the information in that component we use "this.props".
+
+## passing "props" to a component
+
+Information is passed to a component by giving the component an attribute. That attribute is known as "props" and it basically represents information that is being passed.
+
+example:
+
+```javascript
+<MyComponent message="I will pass this information as props" />
+```
+
+In the instance of the component above, there is a set attribute which has a name of 'message' and carries the information. If the information that we want to pass is not a string, then we wrap that information with curly braces as the example below which is an array.
+
+```javascript
+<Greeting myInfo={["top", "secret", "information"]} />
+```
+
+Another example would be;
+
+```javascript
+<Greeting name="James" town="Helsinki" age={22} student={true} />
+```
