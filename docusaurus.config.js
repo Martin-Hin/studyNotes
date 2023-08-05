@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Martin Hinga",
   tagline: "Welcome to my tech learning journey",
-  url: "https://martin-hin.github.io",
+  url: "https://martin-hin.github.io/",
   baseUrl: "/studyNotes/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -60,7 +60,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/martin-hin",
+            href: "https://github.com/martin-hin/",
             label: "My GitHub",
             position: "right",
           },
@@ -104,7 +104,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/martin-hin",
+                href: "https://github.com/martin-hin/",
               },
             ],
           },
