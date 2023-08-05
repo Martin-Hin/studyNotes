@@ -1,41 +1,42 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Martin Hinga',
-  tagline: 'Notes, Blogs, all my tech escapades',
-  url: 'https://martin-hin.github.io',
-  baseUrl: '/studyNotes/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon_1.ico',
-  organizationName: 'Martin-Hin', // Usually your GitHub org/user name.
-  projectName: 'studyNotes', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
+  title: "Martin Hinga",
+  tagline: "Welcome to my tech learning journey",
+  url: "https://martin-hin.github.io",
+  baseUrl: "/studyNotes/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon_1.ico",
+  organizationName: "Martin-Hin", // Usually your GitHub org/user name.
+  projectName: "studyNotes", // Usually your repo name.
+  deploymentBranch: "gh-pages",
   trailingSlash: true,
-  
+
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -45,65 +46,65 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Home',
+        title: "Home",
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo_1.svg',
+          alt: "My Site Logo",
+          src: "img/logo_1.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'My notes',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "My notes",
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: 'https://github.com/martin-hin',
-            label: 'My GitHub',
-            position: 'right',
+            href: "https://github.com/martin-hin",
+            label: "My GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'My notes',
-                to: '/docs/intro',
+                label: "My notes",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: "Stack Overflow",
+                href: "https://stackoverflow.com/",
               },
               {
-                label: 'linkedIn',
-                href: 'https://www.linkedin.com/in/martin-hinga/',
+                label: "linkedIn",
+                href: "https://www.linkedin.com/in/martin-hinga/",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: "Twitter",
+                href: "https://twitter.com/",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: "Blog",
+                to: "/blog",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: "GitHub",
+                href: "https://github.com/martin-hin",
               },
             ],
           },
